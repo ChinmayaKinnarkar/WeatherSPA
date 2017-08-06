@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Weather SPA</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700" rel="stylesheet">
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <body ng-app="weatherApp" ng-controller="weatherCtrl as weather" class="text-center info" ng-style="weatherBackground">
+  <h1>
+  {{channelInfo.heading}}
+  </h1>
+  <h2>
+  {{channelInfo.subHeading1}}
+    </h2>
+  <h3>
+    <a href="{{channelInfo.subHeading2.link}}" target=" ">
+  {{channelInfo.subHeading2.name}}
+    </a>
+  </h3>
+  <a class="btn-lg btn-primary">
+  {{description}}
+    <img ng-src="{{icon}}"/>
+  </a>
+  <a class="btn-lg btn-primary">
+  {{speed}}
+  </a>
+  <a class="btn-lg btn-primary">
+  {{name}}
+  </a>
+  <a class="btn-lg btn-primary" ng-init="tempVal=true" ng-show="tempVal" ng-click="tempVal =! tempVal">
+  {{cTemp}}
+  </a>
+  <a class="btn-lg btn-primary" ng-show="!tempVal" ng-click="tempVal =!tempVal">
+  {{fTemp}}
+  </a>
+</body>
+  <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>

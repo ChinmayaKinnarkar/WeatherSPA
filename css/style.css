@@ -1,0 +1,13 @@
+.info{
+  font-family:'Montserrat';
+}
+
+.btn-lg{
+  margin:5px;
+}
+.weatherBackground{
+ background-position:center center;
+  height:100%;
+  width:100%;
+  background-size:cover;
+}
